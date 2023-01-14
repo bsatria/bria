@@ -1,19 +1,18 @@
-import React from "react";
-import Navbar from "../components/Navbar";
-import { useTimer } from "reactjs-countdown-hook";
+import Navbar from '../components/Navbar'
+import { useTimer } from 'reactjs-countdown-hook'
 
 const Home = () => {
-  const { seconds, minutes, hours, days } = useTimer(800000, handleTimerFinish);
+  const { seconds, minutes, hours, days } = useTimer(800000, handleTimerFinish)
 
   function handleTimerFinish() {
-    alert("Waktunya Nikah!");
+    alert('Waktunya Nikah!')
   }
 
   return (
     <div className="w-screen min-h-screen bg-main bg-cover bg-center bg-no-repeat">
       <div className="w-full h-full p-8 flex flex-col items-center justify-center gap-5">
         <h1 className="text-2xl text-primary font-Bree">The Wedding Of</h1>
-        <img src="mempelai.png" alt="Mempelai" width={180} className="ml-8" />
+        <img src="mempelai.webp" alt="Mempelai" width={180} className="ml-8" />
         <div className="flex flex-col gap-1">
           <h1 className="font-shalimar font-extrabold text-5xl text-primary text-center">
             Yandra Muslim & Anime
@@ -39,7 +38,7 @@ const Home = () => {
       </div>
       <Navbar />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

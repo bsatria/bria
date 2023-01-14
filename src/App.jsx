@@ -1,11 +1,10 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import WelcomeCard from "./components/WelcomeCard";
-import Couples from "./pages/Couples";
-import Event from "./pages/Event";
-import Gift from "./pages/Gift";
-import Home from "./pages/Home";
-import Wishes from "./pages/Wishes";
+import { Routes, Route } from 'react-router-dom'
+import WelcomeCard from './components/WelcomeCard'
+import Couples from './pages/Couples'
+import Event from './pages/Event'
+import Gift from './pages/Gift'
+import Home from './pages/Home'
+import Wishes from './pages/Wishes'
 
 function App() {
   return (
@@ -21,7 +20,7 @@ function App() {
         <Route path="*" element={<h1>NotFound</h1>} />
       </Routes>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

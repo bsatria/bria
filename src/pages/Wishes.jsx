@@ -1,91 +1,95 @@
-import React, { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
-import { useForm } from "react-hook-form";
-import { firestore } from "../config/firebaseConfig";
+import React, { useEffect, useState } from 'react'
+import Navbar from '../components/Navbar'
+import { useForm } from 'react-hook-form'
+import { firestore } from '../config/firebaseConfig.js'
 import {
   collection,
   getDocs,
   setDoc,
   doc,
   onSnapshot,
-} from "firebase/firestore";
-import moment from "moment";
+} from 'firebase/firestore'
+import dayjs from 'dayjs'
+
+const FIRESTORE_ENTITIES = 'wishes'
+import localizedFormat from 'dayjs/plugin/localizedFormat'
+dayjs.extend(localizedFormat)
 
 const Wishes = () => {
   // state
-  const [datas, setDatas] = useState([]);
+  const [datas, setDatas] = useState([])
 
   // react-hook-form
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset } = useForm()
   const handleForm = ({ nama, ucapan, kehadiran }) => {
     if (!nama || !ucapan || !kehadiran) {
-      alert("Lengkapi Semua Form");
-      return;
+      alert('Lengkapi Semua Form')
+      return
     }
-    reset();
-    const docId = Date.now().toString();
-    const wishesRef = doc(firestore, "wishes", docId);
+    reset()
+    const docId = Date.now().toString()
+    const wishesRef = doc(firestore, FIRESTORE_ENTITIES, docId)
     setDoc(wishesRef, {
       id: docId,
       nama: nama,
       ucapan: ucapan,
       kehadiran: kehadiran,
-      createdAt: moment().format("LLLL"),
+      createdAt: dayjs().format('LLLL'),
     })
       .then((res) => {
-        alert("Data Berhasil Ditambahkan");
-        window.location.reload();
+        alert('Data Berhasil Ditambahkan')
+        window.location.reload()
       })
       .catch((err) => {
-        alert("Data Gagal Ditambahkan");
-      });
-  };
+        alert('Data Gagal Ditambahkan')
+      })
+  }
 
   // get collection data
   const getWishesCollection = async () => {
-    const collectionArr = [];
-    const wishesRef = collection(firestore, "wishes");
+    const collectionArr = []
+    const wishesRef = collection(firestore, FIRESTORE_ENTITIES)
     const collectData = await getDocs(wishesRef)
       .then((result) => {
         result.forEach((e) => {
-          collectionArr.push(e.data());
-        });
+          collectionArr.push(e.data())
+        })
       })
       .catch((err) => {
-        console.error(err);
-      });
-    return collectionArr;
-  };
+        console.error(err)
+      })
+    return collectionArr
+  }
 
   // listener function agar realtime add data
   const listener = () => {
-    let wishesRef = collection(firestore, "wishes");
+    let wishesRef = collection(firestore, FIRESTORE_ENTITIES)
     onSnapshot(wishesRef, (newRec) => {
       getWishesCollection()
         .then((res) => {
-          setDatas(res);
+          setDatas(res)
         })
         .catch((err) => {
-          console.error(err);
-        });
-    });
-  };
+          console.error(err)
+        })
+    })
+  }
 
   //clc
   useEffect(() => {
     getWishesCollection()
       .then((res) => {
-        setDatas(res);
+        setDatas(res)
       })
       .catch((err) => {
-        console.error(err);
-      });
+        console.error(err)
+      })
 
     // component did update
     return () => {
-      listener();
-    };
-  }, []);
+      listener()
+    }
+  }, [])
 
   return (
     <div className="w-full min-h-screen bg-main bg-cover bg-left ">
@@ -108,7 +112,7 @@ const Wishes = () => {
               id="nama"
               className="px-3 py-2 rounded-md outline-primary"
               placeholder="Masukkan Nama"
-              {...register("nama")}
+              {...register('nama')}
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -118,7 +122,7 @@ const Wishes = () => {
             <textarea
               className="px-3 py-2 rounded-md outline-primary h-32"
               placeholder="Masukkan Ucapan dan Doa untuk kami berdua:)"
-              {...register("ucapan")}
+              {...register('ucapan')}
             ></textarea>
           </div>
           <div className="flex flex-col gap-2">
@@ -127,7 +131,7 @@ const Wishes = () => {
             </label>
             <select
               className="px-3 py-2 rounded-md outline-primary"
-              {...register("kehadiran")}
+              {...register('kehadiran')}
             >
               <option value=""></option>
               <option value="Hadir">Hadir</option>
@@ -143,7 +147,7 @@ const Wishes = () => {
                 <div className="w-full h-full flex flex-row gap-3 items-end">
                   <h1 className="text-primary font-bold text-xl">
                     {item.nama}
-                  </h1>{" "}
+                  </h1>{' '}
                   <span className="text-orange-500 font-medium">
                     {item.kehadiran}
                   </span>
@@ -157,7 +161,7 @@ const Wishes = () => {
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Wishes;
+export default Wishes

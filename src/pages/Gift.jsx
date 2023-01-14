@@ -1,19 +1,18 @@
-import React from "react";
-import { useState } from "react";
-import Navbar from "../components/Navbar";
+import { useState } from 'react'
+import Navbar from '../components/Navbar'
 
 const Gift = () => {
-  const [copy, setCopy] = useState(true);
+  const [copy, setCopy] = useState(true)
 
   const handleClick = () => {
-    setCopy(false);
+    setCopy(false)
     setTimeout(() => {
-      setCopy(true);
-    }, 2000);
+      setCopy(true)
+    }, 2000)
 
-    navigator.clipboard.writeText("12345678910");
-    return;
-  };
+    navigator.clipboard.writeText('12345678910')
+    return
+  }
   return (
     <>
       <Navbar />
@@ -28,16 +27,16 @@ const Gift = () => {
           <h1 className="text-orange-600">No Rekening: 12345678910</h1>
           <button
             className={`bg-third ${
-              !copy && "bg-green-600 hover:bg-green-800"
+              !copy && 'bg-green-600 hover:bg-green-800'
             } p-3 rounded-md text-white  hover:bg-green-400`}
             onClick={handleClick}
           >
-            {copy ? "Copy No.Rek" : "Berhasil diCopy✔️"}
+            {copy ? 'Copy No.Rek' : 'Berhasil diCopy✔️'}
           </button>
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Gift;
+export default Gift

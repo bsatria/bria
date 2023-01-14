@@ -1,5 +1,4 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -9,8 +8,8 @@ const Navbar = () => {
           to="/home"
           className={({ isActive }) =>
             isActive
-              ? "flex flex-col items-center gap-1 cursor-pointer text-slate-800 group"
-              : "flex flex-col items-center gap-1 cursor-pointer text-white group"
+              ? 'flex flex-col items-center gap-1 cursor-pointer text-slate-800 group'
+              : 'flex flex-col items-center gap-1 cursor-pointer text-white group'
           }
         >
           <img
@@ -27,8 +26,8 @@ const Navbar = () => {
           to="/couples"
           className={({ isActive }) =>
             isActive
-              ? "flex flex-col items-center gap-1 cursor-pointer text-slate-800 group"
-              : "flex flex-col items-center gap-1 cursor-pointer text-white group"
+              ? 'flex flex-col items-center gap-1 cursor-pointer text-slate-800 group'
+              : 'flex flex-col items-center gap-1 cursor-pointer text-white group'
           }
         >
           <img
@@ -45,8 +44,8 @@ const Navbar = () => {
           to="/event"
           className={({ isActive }) =>
             isActive
-              ? "flex flex-col items-center gap-1 cursor-pointer text-slate-800 group"
-              : "flex flex-col items-center gap-1 cursor-pointer text-white group"
+              ? 'flex flex-col items-center gap-1 cursor-pointer text-slate-800 group'
+              : 'flex flex-col items-center gap-1 cursor-pointer text-white group'
           }
         >
           <img
@@ -63,8 +62,8 @@ const Navbar = () => {
           to="/wishes"
           className={({ isActive }) =>
             isActive
-              ? "flex flex-col items-center gap-1 cursor-pointer text-slate-800 group"
-              : "flex flex-col items-center gap-1 cursor-pointer text-white group"
+              ? 'flex flex-col items-center gap-1 cursor-pointer text-slate-800 group'
+              : 'flex flex-col items-center gap-1 cursor-pointer text-white group'
           }
         >
           <img
@@ -81,8 +80,8 @@ const Navbar = () => {
           to="/gift"
           className={({ isActive }) =>
             isActive
-              ? "flex flex-col items-center gap-1 cursor-pointer text-slate-800 group"
-              : "flex flex-col items-center gap-1 cursor-pointer text-white group"
+              ? 'flex flex-col items-center gap-1 cursor-pointer text-slate-800 group'
+              : 'flex flex-col items-center gap-1 cursor-pointer text-white group'
           }
         >
           <img
@@ -97,7 +96,7 @@ const Navbar = () => {
         </NavLink>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
