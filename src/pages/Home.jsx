@@ -20,7 +20,7 @@ const Home = () => {
   }
 
   return (
-    <div className="w-screen min-h-screen bg-home bg-cover bg-center bg-no-repeat">
+    <div className="w-screen h-screen bg-home bg-cover bg-center bg-no-repeat">
       <div className="w-full h-full p-8 flex flex-col items-center justify-center gap-5">
         <h1 className="text-2xl text-primary font-Bree">The Wedding Of</h1>
         <img src="mempelai.webp" alt="Mempelai" width={180} className="ml-8" />

@@ -78,7 +78,9 @@ const Couples = () => {
               </p>
               <AiOutlineInstagram size={60} color="white" />
               <a href="https://www.instagram.com/beridaaf/" target="_blank">
-                <small className="font-Bree text-xl text-white">@beriaaf</small>
+                <small className="font-Bree text-xl text-white">
+                  @beridaaf
+                </small>
               </a>
             </AnimationOnScroll>
           </div>
