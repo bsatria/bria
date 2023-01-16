@@ -5,11 +5,11 @@ import 'animate.css/animate.min.css'
 
 const Couples = () => {
   return (
-    <div className="w-full min-h-screen bg-main bg-cover bg-left ">
+    <div className="w-screen bg-doa bg-repeat bg-inherit bg-center">
       <div className="w-full min-h-screen bg-black bg-opacity-20 flex flex-col gap-5 items-center justify-center p-5">
         <Navbar />
         {/* Salam Card */}
-        <div className="flex flex-col items-center justify-center gap-5 h-screen text-white text-base max-w-xl mx-auto rounded-xl p-8 bg-opacity-10 border border-gray-100">
+        <div className="flex flex-col items-center justify-center gap-5 h-[500px] text-third text-base max-w-xl mx-auto rounded-xl p-8 bg-opacity-10 border-2 border-primary">
           <h1 className="text-center">
             بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيْمِ
           </h1>
@@ -37,15 +37,22 @@ const Couples = () => {
                 alt="Pria"
                 className="w-24 h-28 top-0"
               />
-              <h1 className="font-shalimar text-5xl text-slate-300">Yandra</h1>
-              <h1 className="font-Bree text-3xl text-white">Yandra Muslim</h1>
+              <h1 className="font-rochester text-5xl text-lime-300">Bagas</h1>
+              <h1 className="font-Bree text-lg text-white">
+                Bagas Satria Nugroho
+              </h1>
               <p className="font-Poppins text-white text-center">
-                Putra Ke Dua <br /> Dari Kedua Orang Tuanya
+                Putra Pertama <br /> Bapak Sujarwono dan Ibu Sukarsih
               </p>
               <AiOutlineInstagram size={60} color="white" />
-              <small className="font-Bree text-xl text-white">
-                @yandramuslim
-              </small>
+              <a
+                href="https://www.instagram.com/bagassatria.n/"
+                target="_blank"
+              >
+                <small className="font-Bree text-xl text-white">
+                  @bagassatria.n
+                </small>
+              </a>
             </AnimationOnScroll>
           </div>
 
@@ -62,23 +69,23 @@ const Couples = () => {
                 alt="Pria"
                 className="w-24 h-28 top-0"
               />
-              <h1 className="font-shalimar text-5xl text-slate-300">Anime</h1>
-              <h1 className="font-Bree text-3xl text-white">UTA</h1>
+              <h1 className="font-rochester text-5xl text-lime-300">Berida</h1>
+              <h1 className="font-Bree text-lg text-white">
+                Berida Kholiffatun Afiffah
+              </h1>
               <p className="font-Poppins text-white text-center">
-                Putri Ke Tiga <br /> Dari Kedua Orang Tuanya
+                Putri Pertama <br /> Bapak Sadiran dan Ibu Emi Tririyaningsih
               </p>
               <AiOutlineInstagram size={60} color="white" />
-              <small className="font-Bree text-xl text-white">
-                @onepieceUta
-              </small>
+              <a href="https://www.instagram.com/beridaaf/" target="_blank">
+                <small className="font-Bree text-xl text-white">@beriaaf</small>
+              </a>
             </AnimationOnScroll>
           </div>
         </div>
 
         <section className="py-6 bg-third/30 rounded-xl mb-20">
-          <h1 className="text-white text-3xl md:text-6xl font-Bree text-center">
-            GALLERY
-          </h1>
+          <h1 className="text-white text-3xl font-Bree text-center">Gallery</h1>
           <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
             <img
               src="https://source.unsplash.com/random/301x301/"

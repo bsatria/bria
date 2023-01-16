@@ -95,8 +95,8 @@ const Wishes = () => {
     <div className="w-full min-h-screen bg-main bg-cover bg-left ">
       <Navbar />
       <div className="w-full min-h-screen bg-black bg-opacity-20 flex flex-col gap-5 items-center p-5">
-        <h1 className="font-Open text-primary text-3xl text-center">
-          Ucapkan Sesuatu Yang Baik Untuk Kami
+        <h1 className="font-rochester text-primary font-bold text-3xl text-center">
+          Doa Restu Anda merupakan karunia yang sangat berarti bagi kami
         </h1>
         <form
           onSubmit={handleSubmit(handleForm)}
