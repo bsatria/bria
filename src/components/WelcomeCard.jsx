@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 const WelcomeCard = () => {
   const { nama } = useParams()
   return (
-    <div className="w-screen h-screen bg-main bg-no-repeat bg-cover bg-center mix-blend-darken">
+    <div className="w-screen h-screen bg-home bg-no-repeat bg-cover bg-center mix-blend-darken">
       <div className="w-full h-full bg-black bg-opacity-40 flex items-center justify-center">
         <div className="max-w-3xl w-full flex flex-col gap-4 items-center mx-auto">
           <img src="mempelai.webp" alt="Mempelai" className="w-36" />
