@@ -9,6 +9,17 @@ import Wishes from './pages/Wishes'
 function App() {
   return (
     <>
+      <iframe
+        src="https://github.com/anars/blank-audio/blob/master/250-milliseconds-of-silence.mp3"
+        allow="autoplay"
+        id="audio"
+        style={{
+          display: 'none',
+        }}
+      ></iframe>
+      <audio id="player" autoPlay loop>
+        <source src="song.mp3" type="audio/mp3" />
+      </audio>
       <Routes>
         <Route path="/" element={<WelcomeCard />} />
         <Route path="/:nama" element={<WelcomeCard />} />
