@@ -86,7 +86,7 @@ const Couples = () => {
           </div>
         </div>
 
-        <section className="py-6 bg-third/30 rounded-xl mb-20">
+        {/* <section className="py-6 bg-third/30 rounded-xl mb-20">
           <h1 className="text-white text-3xl font-Bree text-center">Gallery</h1>
           <div className="container grid grid-cols-2 gap-4 p-4 mx-auto md:grid-cols-4">
             <img
@@ -140,7 +140,7 @@ const Couples = () => {
               className="w-full h-full col-span-2 row-span-2 rounded shadow-sm min-h-96 md:col-start-1 md:row-start-3 dark:bg-gray-500 aspect-square"
             />
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   )
