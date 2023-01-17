@@ -38,7 +38,7 @@ const Event = () => {
                 </div>
                 <p>
                   Minggu <br />
-                  29 Desember 2023
+                  29 January 2023
                 </p>
               </div>
               <div className="flex flex-col items-center justify-center text-center text-black font-Open">
@@ -72,7 +72,7 @@ const Event = () => {
                 </div>
                 <p>
                   Minggu <br />
-                  29 Desember 2023
+                  29 January 2023
                 </p>
               </div>
               <div className="flex flex-col items-center justify-center text-center text-black font-Open">
